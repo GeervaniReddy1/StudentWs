@@ -1,0 +1,11 @@
+com\student\app\Application.class
+com\student\exception\ErrorResponse.class
+com\student\exception\StudentDataAccessException.class
+com\student\service\StudentServiceImpl.class
+com\student\app\DynamoDBConfig.class
+com\student\controller\StudentEndPoints.class
+com\student\data\StudentDaoImpl.class
+com\student\model\Student.class
+com\student\exception\StudentServiceException.class
+com\student\service\StudentService.class
+com\student\data\StudentDao.class
