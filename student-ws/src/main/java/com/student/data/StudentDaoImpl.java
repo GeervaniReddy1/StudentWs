@@ -51,10 +51,12 @@ public Student getStudentMapper(Map<String,AttributeValue> studentItem){
         Student std=new Student();
         std.setRollNo(Integer.parseInt(studentItem.get("rollNo").getN()));
         std.setFirstName(studentItem.get("firstName").getS());
+        std.setLastName(studentItem.get("lastName").getS());
         std.setSection(studentItem.get("section").getS());
         std.setCourse(studentItem.get("course").getS());
         std.setPhoneNo(Long.parseLong(studentItem.get("phoneNo").getN()));
         std.setCollegeName(studentItem.get("collegeName").getS());
+        std.setGender(studentItem.get("gender").getS());
   return std;
 }
 

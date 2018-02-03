@@ -11,14 +11,14 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.util.StringUtils;
 
-@Configuration
-@PropertySource({"classpath:application.properties"})
+@Configuration //to specify it is a configuration file
+@PropertySource({"classpath:application.properties"}) // to specify the properties for this class
 @EnableDynamoDBRepositories
-        (basePackages = "com.student.data")
+        (basePackages = "com.student.data") //to specify the repositories for this database
 public class DynamoDBConfig {
 
-    @Value("${amazon.dynamodb.endpoint}")
-    private String amazonDynamoDBEndpoint;
+    @Value("${amazon.dynamodb.endpoint}") //properties ------ values
+    private String amazonDynamoDBEndpoint;   
 
     @Value("${amazon.aws.accesskey}")
     private String amazonAWSAccessKey;
@@ -31,7 +31,7 @@ public class DynamoDBConfig {
         AmazonDynamoDB amazonDynamoDB
                 = new AmazonDynamoDBClient(amazonAWSCredentials());
 
-        if (!StringUtils.isEmpty(amazonDynamoDBEndpoint)) {
+        if (!StringUtils.isEmpty(amazonDynamoDBEndpoint)) {                    
             amazonDynamoDB.setEndpoint(amazonDynamoDBEndpoint);
         }
 
